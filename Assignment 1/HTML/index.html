@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Assignment 7.1 - Front End Web Development Fundamentals</title>
+	<style type="text/css">
+		/*Applying basic style to h1 and body contents*/
+		h1
+		{
+			color:blue;
+			font-size: 30px;
+			font-family: arial;
+			text-decoration: underline;
+		}
+		body
+		{
+			font-size: 18px;
+			font-family: sans-serif;
+		}
+	</style>
+</head>
+<body>
+<h1>Javascript tutorial to increment the value of counter using global variables and functions!</h1><br>
+<p>Initial value of counter : -2</p><br>
+<p>Click the below button to increment the counter value by 3</p><hr>
+<input type="button" name="btnForCounter" value="Click me" onclick="incrementCounterValue();">
+<p id="latestCtValue"></p>
+<script type="text/javascript">
+	//Declaring global variable
+	var count=-2;
+	//This method will increment the counter value by 3 by internally calling actualIncrementer()
+	function incrementCounterValue()
+	{
+		for (var i = 0; i < 3; i++) {
+			actualIncrementer();
+		}
+		document.getElementById("latestCtValue").innerHTML="latest counter value: "+count;
+	}
+	function actualIncrementer()
+	{
+		count+=1;
+	}
+</script>
+</body>
+</html>
